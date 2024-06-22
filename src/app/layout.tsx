@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Header from "@/Components/Header";
 import { AuthProvider } from "@/context/authcontext";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,9 @@ export default function RootLayout({
           <Toaster position="bottom-center" reverseOrder={false} />
           {children}
         </AuthProvider>
+        <Script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js" />
+        <Script src="https://buttons.github.io/buttons.js" />
+        <Script src="https://demo.themesberg.com/windster/app.bundle.js" />
       </body>
     </html>
   );
