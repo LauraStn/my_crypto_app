@@ -4,6 +4,7 @@ import { CreateOfferModal } from "../Modal/CreateOfferModal";
 import { FaDonate } from "react-icons/fa";
 import { SellCryptoModal } from "../Modal/SellCryptoModal";
 import { USDollar } from "@/Utils/currencyFormat";
+import Image from "next/image";
 
 const UserCryptoRow = ({ userHasCrypto }: { userHasCrypto: UserHasCrypto }) => {
   return (
@@ -11,9 +12,12 @@ const UserCryptoRow = ({ userHasCrypto }: { userHasCrypto: UserHasCrypto }) => {
       <td className="py-3 px-6 text-left whitespace-nowrap">
         <div className="flex items-center">
           <div className="mr-2">
-            <img
+            <Image
               className="w-6 h-6 rounded-full"
               src={userHasCrypto.Crypto.image}
+              alt={""}
+              width={24}
+              height={24}
             />
           </div>
           <span className="font-medium"> {userHasCrypto.Crypto.name} </span>

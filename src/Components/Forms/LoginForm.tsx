@@ -99,7 +99,9 @@ export const LoginForm = () => {
       </form>
 
       <div className="mt-4 text-center">
-        <span className="text-sm text-gray-500">Don't have an account?</span>{" "}
+        <span className="text-sm text-gray-500">
+          Don&apos;t have an account?
+        </span>{" "}
         <Link href="/register">
           <button className="text-blue-500 hover:text-blue-600">
             Register

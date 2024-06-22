@@ -1,15 +1,14 @@
 import { createCrypto } from "@/Service/crypto";
 import { CryptoProps } from "@/Utils/types";
 import { Box, Modal } from "@mui/material";
-import { register } from "module";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { ErrorMsg } from "../Error/Error";
-import { MdAdd, MdOutlineLibraryAdd } from "react-icons/md";
+import { MdAdd } from "react-icons/md";
 import { FaBitcoin } from "react-icons/fa";
 
-export const CreateCryptoModal = ({ crypto }: { crypto: CryptoProps }) => {
+export const CreateCryptoModal = () => {
   const style = {
     position: "absolute" as "absolute",
     top: "50%",

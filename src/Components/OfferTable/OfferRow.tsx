@@ -6,6 +6,7 @@ import { EditOfferModal } from "../Modal/EditOfferModal";
 import { USDollar } from "@/Utils/currencyFormat";
 import { isAdmin } from "@/Utils/isAdmin";
 import { Span } from "next/dist/trace";
+import Image from "next/image";
 
 const OfferRow = ({
   offer,
@@ -21,7 +22,13 @@ const OfferRow = ({
       <td className="py-3 px-6 text-left whitespace-nowrap">
         <div className="flex items-center">
           <div className="mr-2">
-            <img className="w-6 h-6 rounded-full" src={offer.Crypto.image} />
+            <Image
+              className="w-6 h-6 rounded-full"
+              src={offer.Crypto.image}
+              alt={""}
+              width={24}
+              height={24}
+            />
           </div>
           <span className="font-medium"> {offer.Crypto.name} </span>
         </div>

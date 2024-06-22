@@ -2,6 +2,7 @@
 import { isAdmin } from "@/Utils/isAdmin";
 import { isConnected } from "@/Utils/isConnected";
 import { useAuth } from "@/context/authcontext";
+import Image from "next/image";
 import Link from "next/link";
 import { redirect, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -38,10 +39,12 @@ const Header = (props: Props) => {
       <nav className="bg-gray-200 text-gray-600 border-gray-200 px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link href="/" className="flex items-center">
-            <img
+            <Image
               src="https://cdn.pixabay.com/photo/2019/04/15/20/42/bitcoin-4130299_1280.png"
               className="mr-3 h-6 sm:h-9"
               alt="Flowbite Logo"
+              width={40}
+              height={40}
             />
             <span className="self-center text-xl font-semibold whitespace-nowra">
               CrypToo
@@ -168,7 +171,7 @@ const Header = (props: Props) => {
           </div>
         </div>
       </nav>{" "}
-      <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+      {/* <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script> */}
     </header>
   );
 };

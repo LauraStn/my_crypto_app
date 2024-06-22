@@ -10,11 +10,7 @@ import { MdAdd } from "react-icons/md";
 import { FaBitcoin } from "react-icons/fa";
 import { createPromoCode } from "@/Service/promoCode";
 
-export const CreateCodeModal = ({
-  promoCode,
-}: {
-  promoCode: PromoCodeProps;
-}) => {
+export const CreateCodeModal = () => {
   const style = {
     position: "absolute" as "absolute",
     top: "50%",

@@ -3,16 +3,9 @@ import { PromoCodeProps } from "@/Utils/types";
 import React, { Fragment, useEffect, useState } from "react";
 import AdminCodeRow from "./AdminCodeRow";
 import { CreateCodeModal } from "../Modal/CreateCodeModal";
+import { CreateCryptoModal } from "../Modal/CreateCryptoModal";
 
-const AdminCodeTable = ({
-  min,
-  max,
-  promoCode,
-}: {
-  min: number;
-  max: number;
-  promoCode: PromoCodeProps;
-}) => {
+const AdminCodeTable = ({ min, max }: { min: number; max: number }) => {
   const [allPromoCodes, setAllPromoCodes] = useState<PromoCodeProps[]>();
 
   useEffect(() => {
@@ -26,7 +19,7 @@ const AdminCodeTable = ({
         <h3 className="text-xl font-bold leading-none text-gray-900">
           All Promo Code
         </h3>
-        <CreateCodeModal promoCode={promoCode} />
+        <CreateCodeModal />
       </div>
       <div className="block w-full overflow-x-auto">
         <table className="items-center w-full bg-transparent border-collapse">

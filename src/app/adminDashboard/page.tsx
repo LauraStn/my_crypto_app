@@ -6,13 +6,7 @@ import UserTable from "@/Components/UserTable/UserTable";
 import { CryptoProps, PromoCodeProps } from "@/Utils/types";
 import React from "react";
 
-const page = ({
-  crypto,
-  promoCode,
-}: {
-  crypto: CryptoProps;
-  promoCode: PromoCodeProps;
-}) => {
+const page = () => {
   return (
     <div>
       <nav className="bg-white border-b border-gray-200 fixed z-30 w-full">
@@ -22,7 +16,7 @@ const page = ({
               {/* <button className="flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center gap-3 justify-around items-center mr-3">
                 <FaBitcoin /> Create a crypto <MdAdd />
               </button> */}
-              <CreateCryptoModal crypto={crypto} />
+              <CreateCryptoModal />
             </div>
           </div>
         </div>
@@ -338,7 +332,7 @@ const page = ({
                 <div className="flex flex-col flex-wrap my-4">
                   <TradeTable min={0} max={5} isVisible={true} />
                   <UserTable min={0} max={5} isVisible={true} />
-                  <AdminCodeTable promoCode={promoCode} min={0} max={99} />
+                  <AdminCodeTable min={0} max={99} />
                 </div>
               </div>
               {/* <div className="mt-4 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -436,8 +430,8 @@ const page = ({
           </p> */}
         </div>
       </div>
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
-      <script src="https://demo.themesberg.com/windster/app.bundle.js"></script>
+      {/* <script async defer src="https://buttons.github.io/buttons.js"></script> */}
+      {/* <script src="https://demo.themesberg.com/windster/app.bundle.js"></script> */}
     </div>
   );
 };
